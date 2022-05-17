@@ -91,6 +91,13 @@ type Props = React.ComponentProps<typeof Surface> & {
    * testID to be used on tests.
    */
   testID?: string;
+  tvParallaxProperties?: any;
+  onFocus?: any;
+  onBlur?: any;
+  nextFocusUp?: any;
+  nextFocusDown?: any;
+  nextFocusLeft?: any;
+  nextFocusRight?: any;
 };
 
 /**
@@ -125,213 +132,241 @@ type Props = React.ComponentProps<typeof Surface> & {
  * export default MyComponent;
  * ```
  */
-const Button = ({
-  disabled,
-  compact,
-  mode = 'text',
-  dark,
-  loading,
-  icon,
-  color: buttonColor,
-  children,
-  uppercase = true,
-  accessibilityLabel,
-  accessibilityHint,
-  onPress,
-  onLongPress,
-  style,
-  theme,
-  contentStyle,
-  labelStyle,
-  testID,
-  accessible,
-  ...rest
-}: Props) => {
-  const { current: elevation } = React.useRef<Animated.Value>(
-    new Animated.Value(disabled || mode !== 'contained' ? 0 : 2)
-  );
-  React.useEffect(() => {
-    elevation.setValue(disabled || mode !== 'contained' ? 0 : 2);
-  }, [mode, elevation, disabled]);
+const Button = React.forwardRef(
+  (
+    {
+      disabled,
+      compact,
+      mode = 'text',
+      dark,
+      loading,
+      icon,
+      color: buttonColor,
+      children,
+      uppercase = true,
+      accessibilityLabel,
+      accessibilityHint,
+      onPress,
+      onLongPress,
+      style,
+      theme,
+      contentStyle,
+      labelStyle,
+      testID,
+      accessible,
+      onFocus,
+      onBlur,
+      nextFocusUp,
+      nextFocusDown,
+      nextFocusLeft,
+      nextFocusRight,
+      ...rest
+    }: Props,
+    ref: any
+  ) => {
+    const { current: elevation } = React.useRef<Animated.Value>(
+      new Animated.Value(disabled || mode !== 'contained' ? 0 : 2)
+    );
+    React.useEffect(() => {
+      elevation.setValue(disabled || mode !== 'contained' ? 0 : 2);
+    }, [mode, elevation, disabled]);
 
-  const handlePressIn = () => {
+    const handleFocus = () => {
+      onFocus && onFocus();
+      handlePressIn();
+    };
+
+    const handleBlur = () => {
+      onBlur && onBlur();
+      handlePressOut();
+    };
+
+    const handlePressIn = () => {
+      if (mode === 'contained') {
+        const { scale } = theme.animation;
+        Animated.timing(elevation, {
+          toValue: 8,
+          duration: 200 * scale,
+          useNativeDriver: true,
+        }).start();
+      }
+    };
+
+    const handlePressOut = () => {
+      if (mode === 'contained') {
+        const { scale } = theme.animation;
+        Animated.timing(elevation, {
+          toValue: 2,
+          duration: 150 * scale,
+          useNativeDriver: true,
+        }).start();
+      }
+    };
+
+    const { colors, roundness } = theme;
+    const font = theme.fonts.medium;
+
+    let backgroundColor: string,
+      borderColor: string,
+      textColor: string,
+      borderWidth: number;
+
     if (mode === 'contained') {
-      const { scale } = theme.animation;
-      Animated.timing(elevation, {
-        toValue: 8,
-        duration: 200 * scale,
-        useNativeDriver: true,
-      }).start();
+      if (disabled) {
+        backgroundColor = color(theme.dark ? white : black)
+          .alpha(0.12)
+          .rgb()
+          .string();
+      } else if (buttonColor) {
+        backgroundColor = buttonColor;
+      } else {
+        backgroundColor = colors.primary;
+      }
+    } else {
+      backgroundColor = 'transparent';
     }
-  };
 
-  const handlePressOut = () => {
-    if (mode === 'contained') {
-      const { scale } = theme.animation;
-      Animated.timing(elevation, {
-        toValue: 2,
-        duration: 150 * scale,
-        useNativeDriver: true,
-      }).start();
-    }
-  };
-
-  const { colors, roundness } = theme;
-  const font = theme.fonts.medium;
-
-  let backgroundColor: string,
-    borderColor: string,
-    textColor: string,
-    borderWidth: number;
-
-  if (mode === 'contained') {
-    if (disabled) {
-      backgroundColor = color(theme.dark ? white : black)
-        .alpha(0.12)
+    if (mode === 'outlined') {
+      borderColor = color(theme.dark ? white : black)
+        .alpha(0.29)
         .rgb()
         .string();
+      borderWidth = StyleSheet.hairlineWidth;
+    } else {
+      borderColor = 'transparent';
+      borderWidth = 0;
+    }
+
+    if (disabled) {
+      textColor = color(theme.dark ? white : black)
+        .alpha(0.32)
+        .rgb()
+        .string();
+    } else if (mode === 'contained') {
+      let isDark;
+
+      if (typeof dark === 'boolean') {
+        isDark = dark;
+      } else {
+        isDark =
+          backgroundColor === 'transparent'
+            ? false
+            : !color(backgroundColor).isLight();
+      }
+
+      textColor = isDark ? white : black;
     } else if (buttonColor) {
-      backgroundColor = buttonColor;
+      textColor = buttonColor;
     } else {
-      backgroundColor = colors.primary;
-    }
-  } else {
-    backgroundColor = 'transparent';
-  }
-
-  if (mode === 'outlined') {
-    borderColor = color(theme.dark ? white : black)
-      .alpha(0.29)
-      .rgb()
-      .string();
-    borderWidth = StyleSheet.hairlineWidth;
-  } else {
-    borderColor = 'transparent';
-    borderWidth = 0;
-  }
-
-  if (disabled) {
-    textColor = color(theme.dark ? white : black)
-      .alpha(0.32)
-      .rgb()
-      .string();
-  } else if (mode === 'contained') {
-    let isDark;
-
-    if (typeof dark === 'boolean') {
-      isDark = dark;
-    } else {
-      isDark =
-        backgroundColor === 'transparent'
-          ? false
-          : !color(backgroundColor).isLight();
+      textColor = colors.primary;
     }
 
-    textColor = isDark ? white : black;
-  } else if (buttonColor) {
-    textColor = buttonColor;
-  } else {
-    textColor = colors.primary;
-  }
+    const rippleColor = color(textColor).alpha(0.32).rgb().string();
+    const buttonStyle = {
+      backgroundColor,
+      borderColor,
+      borderWidth,
+      borderRadius: roundness,
+    };
+    const touchableStyle = {
+      borderRadius: style
+        ? ((StyleSheet.flatten(style) || {}) as ViewStyle).borderRadius ||
+          roundness
+        : roundness,
+    };
 
-  const rippleColor = color(textColor).alpha(0.32).rgb().string();
-  const buttonStyle = {
-    backgroundColor,
-    borderColor,
-    borderWidth,
-    borderRadius: roundness,
-  };
-  const touchableStyle = {
-    borderRadius: style
-      ? ((StyleSheet.flatten(style) || {}) as ViewStyle).borderRadius ||
-        roundness
-      : roundness,
-  };
+    const { color: customLabelColor, fontSize: customLabelSize } =
+      StyleSheet.flatten(labelStyle) || {};
 
-  const { color: customLabelColor, fontSize: customLabelSize } =
-    StyleSheet.flatten(labelStyle) || {};
+    const textStyle = { color: textColor, ...font };
+    const iconStyle =
+      StyleSheet.flatten(contentStyle)?.flexDirection === 'row-reverse'
+        ? styles.iconReverse
+        : styles.icon;
 
-  const textStyle = { color: textColor, ...font };
-  const iconStyle =
-    StyleSheet.flatten(contentStyle)?.flexDirection === 'row-reverse'
-      ? styles.iconReverse
-      : styles.icon;
-
-  return (
-    <Surface
-      {...rest}
-      style={[
-        styles.button,
-        compact && styles.compact,
-        { elevation },
-        buttonStyle,
-        style,
-      ]}
-    >
-      <TouchableRipple
-        borderless
-        delayPressIn={0}
-        onPress={onPress}
-        onLongPress={onLongPress}
-        onPressIn={handlePressIn}
-        onPressOut={handlePressOut}
-        accessibilityLabel={accessibilityLabel}
-        accessibilityHint={accessibilityHint}
-        // @ts-expect-error We keep old a11y props for backwards compat with old RN versions
-        accessibilityTraits={disabled ? ['button', 'disabled'] : 'button'}
-        accessibilityComponentType="button"
-        accessibilityRole="button"
-        accessibilityState={{ disabled }}
-        accessible={accessible}
-        disabled={disabled}
-        rippleColor={rippleColor}
-        style={touchableStyle}
-        testID={testID}
+    return (
+      <Surface
+        {...rest}
+        style={[
+          styles.button,
+          compact && styles.compact,
+          { elevation },
+          buttonStyle,
+          style,
+        ]}
       >
-        <View style={[styles.content, contentStyle]}>
-          {icon && loading !== true ? (
-            <View style={iconStyle}>
-              <Icon
-                source={icon}
+        <TouchableRipple
+          ref={ref}
+          nextFocusUp={nextFocusUp}
+          nextFocusDown={nextFocusDown}
+          nextFocusLeft={nextFocusLeft}
+          nextFocusRight={nextFocusRight}
+          borderless
+          delayPressIn={0}
+          onPress={onPress}
+          onLongPress={onLongPress}
+          onPressIn={handlePressIn}
+          onPressOut={handlePressOut}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          accessibilityLabel={accessibilityLabel}
+          accessibilityHint={accessibilityHint}
+          // @ts-expect-error We keep old a11y props for backwards compat with old RN versions
+          accessibilityTraits={disabled ? ['button', 'disabled'] : 'button'}
+          accessibilityComponentType="button"
+          accessibilityRole="button"
+          accessibilityState={{ disabled }}
+          accessible={accessible}
+          disabled={disabled}
+          rippleColor={rippleColor}
+          style={touchableStyle}
+          testID={testID}
+        >
+          <View style={[styles.content, contentStyle]}>
+            {icon && loading !== true ? (
+              <View style={iconStyle}>
+                <Icon
+                  source={icon}
+                  size={customLabelSize ?? 16}
+                  color={
+                    typeof customLabelColor === 'string'
+                      ? customLabelColor
+                      : textColor
+                  }
+                />
+              </View>
+            ) : null}
+            {loading ? (
+              <ActivityIndicator
                 size={customLabelSize ?? 16}
                 color={
                   typeof customLabelColor === 'string'
                     ? customLabelColor
                     : textColor
                 }
+                style={iconStyle}
               />
-            </View>
-          ) : null}
-          {loading ? (
-            <ActivityIndicator
-              size={customLabelSize ?? 16}
-              color={
-                typeof customLabelColor === 'string'
-                  ? customLabelColor
-                  : textColor
-              }
-              style={iconStyle}
-            />
-          ) : null}
-          <Text
-            selectable={false}
-            numberOfLines={1}
-            style={[
-              styles.label,
-              compact && styles.compactLabel,
-              uppercase && styles.uppercaseLabel,
-              textStyle,
-              font,
-              labelStyle,
-            ]}
-          >
-            {children}
-          </Text>
-        </View>
-      </TouchableRipple>
-    </Surface>
-  );
-};
+            ) : null}
+            <Text
+              selectable={false}
+              numberOfLines={1}
+              style={[
+                styles.label,
+                compact && styles.compactLabel,
+                uppercase && styles.uppercaseLabel,
+                textStyle,
+                font,
+                labelStyle,
+              ]}
+            >
+              {children}
+            </Text>
+          </View>
+        </TouchableRipple>
+      </Surface>
+    );
+  }
+);
 
 const styles = StyleSheet.create({
   button: {

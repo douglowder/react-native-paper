@@ -16,6 +16,7 @@ import Icon, { IconSource } from '../Icon';
 import Surface from '../Surface';
 import Badge from '../Badge';
 import TouchableRipple from '../TouchableRipple/TouchableRipple';
+import TouchableRippleSupported from '../TouchableRipple/TouchableRippleSupported';
 import Text from '../Typography/Text';
 import { black, white } from '../../styles/colors';
 import { withTheme } from '../../core/theming';
@@ -253,7 +254,7 @@ const Touchable = ({
   rippleColor,
   ...rest
 }: TouchableProps) =>
-  TouchableRipple.supported ? (
+  TouchableRippleSupported.supported ? (
     <TouchableRipple
       {...rest}
       disabled={rest.disabled || undefined}

@@ -10,6 +10,7 @@ import {
 import color from 'color';
 
 import TouchableRipple from './TouchableRipple/TouchableRipple';
+import TouchableRippleSupported from './TouchableRipple/TouchableRippleSupported';
 import Icon, { IconSource } from './Icon';
 import CrossFadeIcon from './CrossFadeIcon';
 import { withTheme } from '../core/theming';
@@ -124,7 +125,7 @@ const IconButton = ({
       accessibilityState={{ disabled }}
       disabled={disabled}
       hitSlop={
-        TouchableRipple.supported
+        TouchableRippleSupported.supported
           ? { top: 10, left: 10, bottom: 10, right: 10 }
           : { top: 6, left: 6, bottom: 6, right: 6 }
       }
