@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {
   Animated,
+  Platform,
   View,
   ViewStyle,
   StyleSheet,
@@ -92,6 +93,7 @@ type Props = React.ComponentProps<typeof Surface> & {
    */
   testID?: string;
   tvParallaxProperties?: any;
+  hasTVPreferredFocus?: boolean;
   onFocus?: any;
   onBlur?: any;
   nextFocusUp?: any;
@@ -154,6 +156,8 @@ const Button = React.forwardRef(
       labelStyle,
       testID,
       accessible,
+      tvParallaxProperties,
+      hasTVPreferredFocus,
       onFocus,
       onBlur,
       nextFocusUp,
@@ -181,6 +185,27 @@ const Button = React.forwardRef(
       handlePressOut();
     };
 
+    const handlePress = () => {
+      onPress && onPress();
+      // Show animation on press for Android (TouchableRipple)
+      if (Platform.isTV && Platform.OS === 'android') {
+        const { scale } = theme.animation;
+        Animated.timing(elevation, {
+          toValue: 8,
+          duration: 150 * scale,
+          useNativeDriver: true,
+        }).start(({finished}) => {
+          if (finished) {
+            Animated.timing(elevation, {
+              toValue: mode !== 'contained' ? 0 : 2,
+              duration: 150 * scale,
+              useNativeDriver: true,
+            }).start();
+          }
+        });
+      }
+    };
+        
     const handlePressIn = () => {
       if (mode === 'contained') {
         const { scale } = theme.animation;
@@ -303,12 +328,17 @@ const Button = React.forwardRef(
           nextFocusRight={nextFocusRight}
           borderless
           delayPressIn={0}
-          onPress={onPress}
+          onPress={handlePress}
           onLongPress={onLongPress}
           onPressIn={handlePressIn}
           onPressOut={handlePressOut}
           onFocus={handleFocus}
           onBlur={handleBlur}
+          tvParallaxProperties={
+            /* Show animation on press for Apple TV */
+            tvParallaxProperties || {pressMagnification: 1.05}
+          }
+          hasTVPreferredFocus={hasTVPreferredFocus}
           accessibilityLabel={accessibilityLabel}
           accessibilityHint={accessibilityHint}
           // @ts-expect-error We keep old a11y props for backwards compat with old RN versions

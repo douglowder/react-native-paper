@@ -28,6 +28,7 @@ type Props = React.ComponentProps<typeof TouchableWithoutFeedback> & {
   style?: StyleProp<ViewStyle>;
   theme: ReactNativePaper.Theme;
   tvParallaxProperties?: any;
+  hasTVPreferredFocus?: boolean;
   onFocus?: any;
   onBlur?: any;
   nextFocusUp?: any;
