@@ -2,6 +2,7 @@
 
 exports[`renders button with an accessibility hint 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -12,10 +13,6 @@ exports[`renders button with an accessibility hint 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -26,11 +23,13 @@ exports[`renders button with an accessibility hint 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -47,6 +46,11 @@ exports[`renders button with an accessibility hint 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -108,6 +112,7 @@ exports[`renders button with an accessibility hint 1`] = `
 
 exports[`renders button with an accessibility label 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -118,10 +123,6 @@ exports[`renders button with an accessibility label 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -132,11 +133,13 @@ exports[`renders button with an accessibility label 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -153,6 +156,11 @@ exports[`renders button with an accessibility label 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -214,6 +222,7 @@ exports[`renders button with an accessibility label 1`] = `
 
 exports[`renders button with color 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -224,10 +233,6 @@ exports[`renders button with color 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -237,11 +242,13 @@ exports[`renders button with color 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -258,6 +265,11 @@ exports[`renders button with color 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -319,6 +331,7 @@ exports[`renders button with color 1`] = `
 
 exports[`renders button with custom testID 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -329,10 +342,6 @@ exports[`renders button with custom testID 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -342,11 +351,13 @@ exports[`renders button with custom testID 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -365,6 +376,11 @@ exports[`renders button with custom testID 1`] = `
       ]
     }
     testID="custom:testID"
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
+    }
   >
     <View
       style={
@@ -425,6 +441,7 @@ exports[`renders button with custom testID 1`] = `
 
 exports[`renders button with icon 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -435,10 +452,6 @@ exports[`renders button with icon 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -448,11 +461,13 @@ exports[`renders button with icon 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -469,6 +484,11 @@ exports[`renders button with icon 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -558,6 +578,7 @@ exports[`renders button with icon 1`] = `
 
 exports[`renders button with icon in reverse order 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -568,10 +589,6 @@ exports[`renders button with icon in reverse order 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -581,11 +598,13 @@ exports[`renders button with icon in reverse order 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -602,6 +621,11 @@ exports[`renders button with icon in reverse order 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -693,6 +717,7 @@ exports[`renders button with icon in reverse order 1`] = `
 
 exports[`renders contained contained with mode 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "#6200ee",
@@ -703,10 +728,6 @@ exports[`renders contained contained with mode 1`] = `
       "elevation": 2,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0.75,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 1.5,
     }
@@ -716,11 +737,13 @@ exports[`renders contained contained with mode 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -737,6 +760,11 @@ exports[`renders contained contained with mode 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -798,6 +826,7 @@ exports[`renders contained contained with mode 1`] = `
 
 exports[`renders disabled button 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -808,10 +837,6 @@ exports[`renders disabled button 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -825,7 +850,9 @@ exports[`renders disabled button 1`] = `
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -842,6 +869,11 @@ exports[`renders disabled button 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -903,6 +935,7 @@ exports[`renders disabled button 1`] = `
 
 exports[`renders loading button 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -913,10 +946,6 @@ exports[`renders loading button 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -926,11 +955,13 @@ exports[`renders loading button 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -947,6 +978,11 @@ exports[`renders loading button 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -993,6 +1029,7 @@ exports[`renders loading button 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
                 "alignItems": "center",
@@ -1006,6 +1043,7 @@ exports[`renders loading button 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
                 Object {
                   "height": 16,
@@ -1029,6 +1067,7 @@ exports[`renders loading button 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "height": 16,
@@ -1055,6 +1094,7 @@ exports[`renders loading button 1`] = `
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
                           "borderColor": "#6200ee",
@@ -1071,6 +1111,7 @@ exports[`renders loading button 1`] = `
             </View>
           </View>
           <View
+            collapsable={false}
             style={
               Object {
                 "alignItems": "center",
@@ -1084,6 +1125,7 @@ exports[`renders loading button 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
                 Object {
                   "height": 16,
@@ -1108,6 +1150,7 @@ exports[`renders loading button 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "height": 16,
@@ -1134,6 +1177,7 @@ exports[`renders loading button 1`] = `
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
                           "borderColor": "#6200ee",
@@ -1198,6 +1242,7 @@ exports[`renders loading button 1`] = `
 
 exports[`renders outlined button with mode 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -1208,10 +1253,6 @@ exports[`renders outlined button with mode 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -1221,11 +1262,13 @@ exports[`renders outlined button with mode 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1242,6 +1285,11 @@ exports[`renders outlined button with mode 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -1303,6 +1351,7 @@ exports[`renders outlined button with mode 1`] = `
 
 exports[`renders text button by default 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -1313,10 +1362,6 @@ exports[`renders text button by default 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -1326,11 +1371,13 @@ exports[`renders text button by default 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1347,6 +1394,11 @@ exports[`renders text button by default 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View
@@ -1408,6 +1460,7 @@ exports[`renders text button by default 1`] = `
 
 exports[`renders text button with mode 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "backgroundColor": "transparent",
@@ -1418,10 +1471,6 @@ exports[`renders text button with mode 1`] = `
       "elevation": 0,
       "minWidth": 64,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 0,
-        "width": 0,
-      },
       "shadowOpacity": 0,
       "shadowRadius": 0,
     }
@@ -1431,11 +1480,13 @@ exports[`renders text button with mode 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
-    focusable={false}
+    focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1452,6 +1503,11 @@ exports[`renders text button with mode 1`] = `
           "borderRadius": 4,
         },
       ]
+    }
+    tvParallaxProperties={
+      Object {
+        "pressMagnification": 1.05,
+      }
     }
   >
     <View

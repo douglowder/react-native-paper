@@ -5,6 +5,7 @@ exports[`renders menu with content styles 1`] = `
   collapsable={false}
 >
   <View
+    collapsable={false}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -15,10 +16,6 @@ exports[`renders menu with content styles 1`] = `
         "elevation": 0,
         "minWidth": 64,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
         "shadowOpacity": 0,
         "shadowRadius": 0,
       }
@@ -28,11 +25,13 @@ exports[`renders menu with content styles 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
-          "disabled": undefined,
+          "disabled": false,
         }
       }
       accessible={true}
-      focusable={false}
+      focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -49,6 +48,11 @@ exports[`renders menu with content styles 1`] = `
             "borderRadius": 4,
           },
         ]
+      }
+      tvParallaxProperties={
+        Object {
+          "pressMagnification": 1.05,
+        }
       }
     >
       <View
@@ -114,6 +118,7 @@ exports[`renders not visible menu 1`] = `
   collapsable={false}
 >
   <View
+    collapsable={false}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -124,10 +129,6 @@ exports[`renders not visible menu 1`] = `
         "elevation": 0,
         "minWidth": 64,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
         "shadowOpacity": 0,
         "shadowRadius": 0,
       }
@@ -137,11 +138,13 @@ exports[`renders not visible menu 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
-          "disabled": undefined,
+          "disabled": false,
         }
       }
       accessible={true}
-      focusable={false}
+      focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -158,6 +161,11 @@ exports[`renders not visible menu 1`] = `
             "borderRadius": 4,
           },
         ]
+      }
+      tvParallaxProperties={
+        Object {
+          "pressMagnification": 1.05,
+        }
       }
     >
       <View
@@ -223,6 +231,7 @@ exports[`renders visible menu 1`] = `
   collapsable={false}
 >
   <View
+    collapsable={false}
     style={
       Object {
         "backgroundColor": "transparent",
@@ -233,10 +242,6 @@ exports[`renders visible menu 1`] = `
         "elevation": 0,
         "minWidth": 64,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 0,
-          "width": 0,
-        },
         "shadowOpacity": 0,
         "shadowRadius": 0,
       }
@@ -246,11 +251,13 @@ exports[`renders visible menu 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
-          "disabled": undefined,
+          "disabled": false,
         }
       }
       accessible={true}
-      focusable={false}
+      focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -267,6 +274,11 @@ exports[`renders visible menu 1`] = `
             "borderRadius": 4,
           },
         ]
+      }
+      tvParallaxProperties={
+        Object {
+          "pressMagnification": 1.05,
+        }
       }
     >
       <View

@@ -13,11 +13,14 @@ exports[`renders expanded accordion 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
+          "disabled": false,
           "expanded": true,
         }
       }
       accessible={true}
       focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -123,8 +126,15 @@ exports[`renders expanded accordion 1`] = `
     </View>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -211,11 +221,14 @@ exports[`renders list accordion with children 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
+          "disabled": false,
           "expanded": false,
         }
       }
       accessible={true}
       focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -371,11 +384,14 @@ exports[`renders list accordion with custom title and description styles 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
+          "disabled": false,
           "expanded": false,
         }
       }
       accessible={true}
       focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -531,11 +547,14 @@ exports[`renders list accordion with left items 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
+          "disabled": false,
           "expanded": false,
         }
       }
       accessible={true}
       focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}
@@ -691,11 +710,14 @@ exports[`renders multiline list accordion 1`] = `
       accessibilityRole="button"
       accessibilityState={
         Object {
+          "disabled": false,
           "expanded": false,
         }
       }
       accessible={true}
       focusable={true}
+      hasTVPreferredFocus={false}
+      isTVSelectable={true}
       onClick={[Function]}
       onResponderGrant={[Function]}
       onResponderMove={[Function]}

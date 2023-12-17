@@ -11,6 +11,7 @@ exports[`renders disabled toggle button 1`] = `
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
   hitSlop={
     Object {
       "bottom": 6,
@@ -19,6 +20,7 @@ exports[`renders disabled toggle button 1`] = `
       "top": 6,
     }
   }
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -90,12 +92,13 @@ exports[`renders toggle button 1`] = `
   accessibilityRole="button"
   accessibilityState={
     Object {
-      "disabled": undefined,
+      "disabled": false,
       "selected": true,
     }
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
   hitSlop={
     Object {
       "bottom": 6,
@@ -104,6 +107,7 @@ exports[`renders toggle button 1`] = `
       "top": 6,
     }
   }
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -179,6 +183,7 @@ exports[`renders unchecked toggle button 1`] = `
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
   hitSlop={
     Object {
       "bottom": 6,
@@ -187,6 +192,7 @@ exports[`renders unchecked toggle button 1`] = `
       "top": 6,
     }
   }
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

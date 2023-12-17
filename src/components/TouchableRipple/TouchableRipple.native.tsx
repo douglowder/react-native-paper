@@ -13,7 +13,6 @@ import {
 import color from 'color';
 import { withTheme } from '../../core/theming';
 import TouchableRippleSupported from './TouchableRippleSupported';
-import 'react-native/tvos-types.d';
 
 const ANDROID_VERSION_PIE = 28;
 

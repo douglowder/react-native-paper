@@ -2,6 +2,7 @@
 
 exports[`renders with placeholder 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "alignItems": "center",
@@ -10,10 +11,6 @@ exports[`renders with placeholder 1`] = `
       "elevation": 4,
       "flexDirection": "row",
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 3,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 4,
     }
@@ -24,11 +21,12 @@ exports[`renders with placeholder 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": true,
       }
     }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
     hitSlop={
       Object {
         "bottom": 6,
@@ -37,6 +35,7 @@ exports[`renders with placeholder 1`] = `
         "top": 6,
       }
     }
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -92,11 +91,9 @@ exports[`renders with placeholder 1`] = `
   <TextInput
     accessibilityRole="search"
     accessibilityTraits="search"
-    allowFontScaling={true}
     keyboardAppearance="light"
     placeholder="Search"
     placeholderTextColor="rgba(0, 0, 0, 0.54)"
-    rejectResponderTermination={true}
     returnKeyType="search"
     selectionColor="#6200ee"
     style={
@@ -129,6 +126,7 @@ exports[`renders with placeholder 1`] = `
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
     hitSlop={
       Object {
         "bottom": 6,
@@ -137,6 +135,7 @@ exports[`renders with placeholder 1`] = `
         "top": 6,
       }
     }
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -196,6 +195,7 @@ exports[`renders with placeholder 1`] = `
 
 exports[`renders with text 1`] = `
 <View
+  collapsable={false}
   style={
     Object {
       "alignItems": "center",
@@ -204,10 +204,6 @@ exports[`renders with text 1`] = `
       "elevation": 4,
       "flexDirection": "row",
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 3,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 4,
     }
@@ -218,11 +214,12 @@ exports[`renders with text 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": true,
       }
     }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
     hitSlop={
       Object {
         "bottom": 6,
@@ -231,6 +228,7 @@ exports[`renders with text 1`] = `
         "top": 6,
       }
     }
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -286,11 +284,9 @@ exports[`renders with text 1`] = `
   <TextInput
     accessibilityRole="search"
     accessibilityTraits="search"
-    allowFontScaling={true}
     keyboardAppearance="light"
     placeholder="Search"
     placeholderTextColor="rgba(0, 0, 0, 0.54)"
-    rejectResponderTermination={true}
     returnKeyType="search"
     selectionColor="#6200ee"
     style={
@@ -324,6 +320,7 @@ exports[`renders with text 1`] = `
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
     hitSlop={
       Object {
         "bottom": 6,
@@ -332,6 +329,7 @@ exports[`renders with text 1`] = `
         "top": 6,
       }
     }
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

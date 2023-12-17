@@ -2,6 +2,7 @@
 
 exports[`renders custom color for the icon and label of the FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -10,10 +11,6 @@ exports[`renders custom color for the icon and label of the FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -28,11 +25,13 @@ exports[`renders custom color for the icon and label of the FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -82,6 +81,7 @@ exports[`renders custom color for the icon and label of the FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -126,6 +126,7 @@ exports[`renders custom color for the icon and label of the FAB 1`] = `
 
 exports[`renders disabled FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -150,6 +151,8 @@ exports[`renders disabled FAB 1`] = `
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -199,6 +202,7 @@ exports[`renders disabled FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -243,6 +247,7 @@ exports[`renders disabled FAB 1`] = `
 
 exports[`renders extended FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -251,10 +256,6 @@ exports[`renders extended FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -270,11 +271,13 @@ exports[`renders extended FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -324,6 +327,7 @@ exports[`renders extended FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -398,6 +402,7 @@ exports[`renders extended FAB 1`] = `
 
 exports[`renders loading FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -406,10 +411,6 @@ exports[`renders loading FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -424,11 +425,13 @@ exports[`renders loading FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -492,6 +495,7 @@ exports[`renders loading FAB 1`] = `
           }
         >
           <View
+            collapsable={false}
             style={
               Object {
                 "alignItems": "center",
@@ -505,6 +509,7 @@ exports[`renders loading FAB 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
                 Object {
                   "height": 18,
@@ -528,6 +533,7 @@ exports[`renders loading FAB 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "height": 18,
@@ -554,6 +560,7 @@ exports[`renders loading FAB 1`] = `
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
                           "borderColor": "rgba(0, 0, 0, .54)",
@@ -570,6 +577,7 @@ exports[`renders loading FAB 1`] = `
             </View>
           </View>
           <View
+            collapsable={false}
             style={
               Object {
                 "alignItems": "center",
@@ -583,6 +591,7 @@ exports[`renders loading FAB 1`] = `
             }
           >
             <View
+              collapsable={false}
               style={
                 Object {
                   "height": 18,
@@ -607,6 +616,7 @@ exports[`renders loading FAB 1`] = `
                 }
               >
                 <View
+                  collapsable={false}
                   style={
                     Object {
                       "height": 18,
@@ -633,6 +643,7 @@ exports[`renders loading FAB 1`] = `
                     }
                   >
                     <View
+                      collapsable={false}
                       style={
                         Object {
                           "borderColor": "rgba(0, 0, 0, .54)",
@@ -657,6 +668,7 @@ exports[`renders loading FAB 1`] = `
 
 exports[`renders normal FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -665,10 +677,6 @@ exports[`renders normal FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -683,11 +691,13 @@ exports[`renders normal FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -737,6 +747,7 @@ exports[`renders normal FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -781,6 +792,7 @@ exports[`renders normal FAB 1`] = `
 
 exports[`renders not visible FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="none"
   style={
     Object {
@@ -789,10 +801,6 @@ exports[`renders not visible FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -807,11 +815,13 @@ exports[`renders not visible FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -861,6 +871,7 @@ exports[`renders not visible FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -905,6 +916,7 @@ exports[`renders not visible FAB 1`] = `
 
 exports[`renders small FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -913,10 +925,6 @@ exports[`renders small FAB 1`] = `
       "elevation": 6,
       "opacity": 1,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -931,11 +939,13 @@ exports[`renders small FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -985,6 +995,7 @@ exports[`renders small FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,
@@ -1029,6 +1040,7 @@ exports[`renders small FAB 1`] = `
 
 exports[`renders visible FAB 1`] = `
 <View
+  collapsable={false}
   pointerEvents="auto"
   style={
     Object {
@@ -1037,10 +1049,6 @@ exports[`renders visible FAB 1`] = `
       "elevation": 6,
       "opacity": 0,
       "shadowColor": "#000000",
-      "shadowOffset": Object {
-        "height": 5,
-        "width": 0,
-      },
       "shadowOpacity": 0.24,
       "shadowRadius": 6,
       "transform": Array [
@@ -1055,11 +1063,13 @@ exports[`renders visible FAB 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -1109,6 +1119,7 @@ exports[`renders visible FAB 1`] = `
         }
       >
         <View
+          collapsable={false}
           style={
             Object {
               "bottom": 0,

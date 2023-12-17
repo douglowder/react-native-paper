@@ -83,8 +83,15 @@ exports[`renders list section with custom title style 1`] = `
     Some title
   </Text>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -195,8 +202,15 @@ exports[`renders list section with custom title style 1`] = `
     </View>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -390,8 +404,15 @@ exports[`renders list section with subheader 1`] = `
     Some title
   </Text>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -502,8 +523,15 @@ exports[`renders list section with subheader 1`] = `
     </View>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -668,8 +696,15 @@ exports[`renders list section without subheader 1`] = `
   }
 >
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -780,8 +815,15 @@ exports[`renders list section without subheader 1`] = `
     </View>
   </View>
   <View
+    accessibilityState={
+      Object {
+        "disabled": true,
+      }
+    }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

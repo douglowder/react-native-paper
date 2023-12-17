@@ -10,11 +10,13 @@ exports[`RadioButtonGroup renders properly 1`] = `
     accessibilityState={
       Object {
         "checked": true,
-        "disabled": undefined,
+        "disabled": false,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}

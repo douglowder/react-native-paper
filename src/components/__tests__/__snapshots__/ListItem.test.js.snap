@@ -2,8 +2,15 @@
 
 exports[`renders list item with custom description 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -85,6 +92,7 @@ exports[`renders list item with custom description 1`] = `
         </Text>
         <View>
           <View
+            collapsable={false}
             style={
               Object {
                 "backgroundColor": "#ebebeb",
@@ -107,6 +115,8 @@ exports[`renders list item with custom description 1`] = `
               }
               accessible={true}
               focusable={true}
+              hasTVPreferredFocus={false}
+              isTVSelectable={true}
               onClick={[Function]}
               onResponderGrant={[Function]}
               onResponderMove={[Function]}
@@ -223,8 +233,15 @@ exports[`renders list item with custom description 1`] = `
 
 exports[`renders list item with custom title and description styles 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -330,8 +347,15 @@ exports[`renders list item with custom title and description styles 1`] = `
 
 exports[`renders list item with left and right items 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -473,8 +497,15 @@ exports[`renders list item with left and right items 1`] = `
 
 exports[`renders list item with left item 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -588,8 +619,15 @@ exports[`renders list item with left item 1`] = `
 
 exports[`renders list item with right item 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -667,8 +705,15 @@ exports[`renders list item with right item 1`] = `
 
 exports[`renders list item with title and description 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -770,8 +815,15 @@ exports[`renders list item with title and description 1`] = `
 
 exports[`renders with a description with typeof number 1`] = `
 <View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
   accessible={true}
   focusable={false}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

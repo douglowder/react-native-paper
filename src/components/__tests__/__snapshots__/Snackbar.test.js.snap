@@ -19,6 +19,7 @@ exports[`renders snackbar with Text as a child 1`] = `
 >
   <View
     accessibilityLiveRegion="polite"
+    collapsable={false}
     pointerEvents="box-none"
     style={
       Object {
@@ -31,10 +32,6 @@ exports[`renders snackbar with Text as a child 1`] = `
         "margin": 8,
         "opacity": 1,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 5,
-          "width": 0,
-        },
         "shadowOpacity": 0.24,
         "shadowRadius": 6,
         "transform": Array [
@@ -96,6 +93,7 @@ exports[`renders snackbar with action button 1`] = `
 >
   <View
     accessibilityLiveRegion="polite"
+    collapsable={false}
     pointerEvents="box-none"
     style={
       Object {
@@ -108,10 +106,6 @@ exports[`renders snackbar with action button 1`] = `
         "margin": 8,
         "opacity": 1,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 5,
-          "width": 0,
-        },
         "shadowOpacity": 0.24,
         "shadowRadius": 6,
         "transform": Array [
@@ -151,6 +145,7 @@ exports[`renders snackbar with action button 1`] = `
       Snackbar content
     </Text>
     <View
+      collapsable={false}
       style={
         Object {
           "backgroundColor": "transparent",
@@ -163,10 +158,6 @@ exports[`renders snackbar with action button 1`] = `
           "marginVertical": 6,
           "minWidth": "auto",
           "shadowColor": "#000000",
-          "shadowOffset": Object {
-            "height": 0,
-            "width": 0,
-          },
           "shadowOpacity": 0,
           "shadowRadius": 0,
         }
@@ -176,11 +167,13 @@ exports[`renders snackbar with action button 1`] = `
         accessibilityRole="button"
         accessibilityState={
           Object {
-            "disabled": undefined,
+            "disabled": false,
           }
         }
         accessible={true}
         focusable={true}
+        hasTVPreferredFocus={false}
+        isTVSelectable={true}
         onClick={[Function]}
         onResponderGrant={[Function]}
         onResponderMove={[Function]}
@@ -197,6 +190,11 @@ exports[`renders snackbar with action button 1`] = `
               "borderRadius": 4,
             },
           ]
+        }
+        tvParallaxProperties={
+          Object {
+            "pressMagnification": 1.05,
+          }
         }
       >
         <View
@@ -277,6 +275,7 @@ exports[`renders snackbar with content 1`] = `
 >
   <View
     accessibilityLiveRegion="polite"
+    collapsable={false}
     pointerEvents="box-none"
     style={
       Object {
@@ -289,10 +288,6 @@ exports[`renders snackbar with content 1`] = `
         "margin": 8,
         "opacity": 1,
         "shadowColor": "#000000",
-        "shadowOffset": Object {
-          "height": 5,
-          "width": 0,
-        },
         "shadowOpacity": 0.24,
         "shadowRadius": 6,
         "transform": Array [

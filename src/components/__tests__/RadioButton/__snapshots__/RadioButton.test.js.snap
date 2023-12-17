@@ -7,11 +7,13 @@ exports[`RadioButton RadioButton with custom testID renders properly 1`] = `
   accessibilityState={
     Object {
       "checked": false,
-      "disabled": undefined,
+      "disabled": false,
     }
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -70,11 +72,13 @@ exports[`RadioButton on default platform renders properly 1`] = `
   accessibilityState={
     Object {
       "checked": false,
-      "disabled": undefined,
+      "disabled": false,
     }
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -132,11 +136,13 @@ exports[`RadioButton on ios platform renders properly 1`] = `
   accessibilityState={
     Object {
       "checked": false,
-      "disabled": undefined,
+      "disabled": false,
     }
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}
@@ -194,11 +200,13 @@ exports[`RadioButton when RadioButton is wrapped by RadioButtonContext.Provider 
   accessibilityState={
     Object {
       "checked": false,
-      "disabled": undefined,
+      "disabled": false,
     }
   }
   accessible={true}
   focusable={true}
+  hasTVPreferredFocus={false}
+  isTVSelectable={true}
   onClick={[Function]}
   onResponderGrant={[Function]}
   onResponderMove={[Function]}

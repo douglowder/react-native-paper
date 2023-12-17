@@ -6,11 +6,14 @@ exports[`renders DrawerItem with icon 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
+        "disabled": true,
         "selected": undefined,
       }
     }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -115,11 +118,14 @@ exports[`renders active DrawerItem 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
+        "disabled": true,
         "selected": true,
       }
     }
     accessible={true}
     focusable={false}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
@@ -224,11 +230,14 @@ exports[`renders basic DrawerItem 1`] = `
     accessibilityRole="button"
     accessibilityState={
       Object {
+        "disabled": false,
         "selected": undefined,
       }
     }
     accessible={true}
     focusable={true}
+    hasTVPreferredFocus={false}
+    isTVSelectable={true}
     onClick={[Function]}
     onResponderGrant={[Function]}
     onResponderMove={[Function]}
